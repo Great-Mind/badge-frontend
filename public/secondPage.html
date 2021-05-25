@@ -629,7 +629,7 @@ div.one {
               $("#datasetid").text(dataset_id);
             var table = $('#myTable').DataTable( {
                   ajax: {
-                      url: `http://3.84.55.37:8080/badge/badges?dataset_id=${dataset_id}`,
+                      url: `http://localhost:8080/badge/badges?dataset_id=${dataset_id}`,
                       dataSrc: '',
                   },
               colReorder: {
@@ -655,7 +655,7 @@ div.one {
         
       );
           const getDataforbadge = (myChart, dateFrom, dateTo, interval) => {
-              var URL = `http://3.84.55.37:8080/badge/activehistory?dataset_id=${dataset_id}`;
+              var URL = `http://localhost:8080/badge/activehistory?dataset_id=${dataset_id}`;
               if (dateFrom != null) {
                 URL = URL + "&dataFrom=" + dateFrom.toString();
               }
@@ -751,7 +751,7 @@ div.one {
         setTimeout(onlineBadge, 10 * 1000);
         $("#test").empty()
         $.ajax({
-          url:'http://3.84.55.37:8080/badge/activephone',
+          url:'http://localhost:8080/badge/activephone',
           type:'get',
           dataType:'json',
           success: function(data) {
@@ -766,7 +766,7 @@ div.one {
       }
       //
       const getDataforMove = (move, dateFrom,dateTo, interval) => {
-        var URL2 = `http://3.84.55.37:8080/badge/badgemovementratio?dataset_id=${dataset_id}`;
+        var URL2 = `http://localhost:8080/badge/badgemovementratio?dataset_id=${dataset_id}`;
         if (dateFrom != null) {
                 URL2 = URL2 + "&dataFrom=" + dateFrom.toString();
               }
@@ -801,7 +801,7 @@ div.one {
         })
       }
       const getDataforPower = (voice, dateFrom, dateTo, interval) => {
-              var URL1 = `http://3.84.55.37:8080/badge/speechratio?dataset_id=${dataset_id}`;
+              var URL1 = `http://localhost:8080/badge/speechratio?dataset_id=${dataset_id}`;
               if (dateFrom != null) {
                 URL1 = URL1 + "&dataFrom=" + dateFrom.toString();
               }
@@ -925,7 +925,7 @@ div.one {
             
             
             const getDataforVoice = (pieChart, dateFrom, dateTo, interval) => {
-              var URL = `http://3.84.55.37:8080/badge/badgespeechratio?dataset_id=${dataset_id}`;
+              var URL = `http://localhost:8080/badge/badgespeechratio?dataset_id=${dataset_id}`;
               if (dateFrom != null) {
                 URL = URL + "&dataFrom=" + dateFrom.toString();
               }
@@ -1067,7 +1067,7 @@ function getRandomColor() {
         };
         // TODO: [ajax] try backend connection
         $.ajax({
-          url: "http://3.84.55.37:8080/user/badgeregister",
+          url: "http://localhost:8080/user/badgeregister",
           type: "post",
           data: newBadge,
           success: function (result) { alert(result); },
@@ -1087,7 +1087,7 @@ function getRandomColor() {
 
         // TODO: [ajax] backend controller
         $.ajax({
-          url: "http://3.84.55.37:8080/user/getbadges",
+          url: "http://localhost:8080/user/getbadges",
           type: "get",
           success: function (result) {
             for (var i = 0; i < result.length; i++) {
@@ -1140,7 +1140,7 @@ function getRandomColor() {
         // console.log(typeof(str1));
 
         $.ajax({
-          url: "http://3.84.55.37:8080/user/assign",
+          url: "http://localhost:8080/user/assign",
           type: "post",
           contentType: "application/json",
           data: jsonString,
