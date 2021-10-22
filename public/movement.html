@@ -241,7 +241,7 @@
             const dataset_id = getUrlVars()["dataset_id"];
             const badge_id = getUrlVars()["badge_id"];
             const getData = (myChart, dateFrom, dateTo) => {
-              var URL = `http://fe80::908c:f4bf:10b5:6fee:8080/badge/movement?badge_id=${badge_id}`;
+              var URL = `http://128.253.128.12:8080/badge/movement?badge_id=${badge_id}`;
               if (dateFrom != null) {
                 URL = URL + "&dataFrom=" + dateFrom.toString();
               }
@@ -340,7 +340,7 @@
             $(document).ready(function() {
                 var table = $('#myTable').DataTable( {
                         ajax: {
-                            url: `http://fe80::908c:f4bf:10b5:6fee:8080/badge/movement?badge_id=${badge_id}`,
+                            url: `http://128.253.128.12:8080/badge/movement?badge_id=${badge_id}`,
                             dataSrc: ''
                         },
                     colReorder: {

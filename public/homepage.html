@@ -211,7 +211,7 @@
         setTimeout(onlineBadge, 10 * 1000);
         $("#test").empty()
         $.ajax({
-          url:'http://fe80::908c:f4bf:10b5:6fee:8080/badge/activephone',
+          url:'http://128.253.128.12:8080/badge/activephone',
           type:'get',
           dataType:'json',
           success: function(data) {
@@ -239,7 +239,7 @@
         $("#user").text( username);
         var table = $('#myTable').DataTable( {
                 ajax: {
-                    url: `http://fe80::908c:f4bf:10b5:6fee:8080/dataset`,
+                    url: `http://128.253.128.12:8080/dataset`,
                     dataSrc: ''     
                 },
             colReorder: {

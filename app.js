@@ -69,7 +69,7 @@ app.post('/login', function(req, res, next){
     var email = req.body.email;
     var passwd = req.body.passwd;
     // $.ajax({
-    //     url:`http://fe80::908c:f4bf:10b5:6fee:8080/login?email=${email}&passwd=${passwd}`,
+    //     url:`http://128.253.128.12:8080/login?email=${email}&passwd=${passwd}`,
     //     type: 'POST',
     //     success: function(result) {
     //         if (result) {
@@ -87,7 +87,7 @@ app.post('/login', function(req, res, next){
 
     // });
     
-    var url = `http://fe80::908c:f4bf:10b5:6fee:8080/user/login?email=${email}&passwd=${passwd}`;
+    var url = `http://128.253.128.12:8080/user/login?email=${email}&passwd=${passwd}`;
     request.post(url, function (error, response, body) {
 
   if (!error && response.statusCode == 200) {
@@ -113,7 +113,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public', '/login.html'));
 })
 app.listen(port, () => {
-  console.log(`Example app listening at http://fe80::908c:f4bf:10b5:6fee:${port}`)
+  console.log(`Example app listening at http://128.253.128.12:${port}`)
 })
 app.get('/home', function (req, res) {
     res.sendFile(path.join(__dirname, './public', '/homepage.html'));
