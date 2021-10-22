@@ -220,7 +220,7 @@
             var time_stamp_list = [];
             var speak_time_tm = 0;
             
-            $.ajax({url: `http://badgeserver.ece.cornell.edu:8080/badge/badges?dataset_id=${dataset_id}`, 
+            $.ajax({url: `http://128.253.128.12:8080/badge/badges?dataset_id=${dataset_id}`, 
               success: function(result){
                 result.forEach(item => {
                   if (dict[item.macaddr] == null){
@@ -228,7 +228,7 @@
                   }
                 });
                             
-            $.ajax({url: `http://badgeserver.ece.cornell.edu:8080/badge/nearphone?badge_id=${badge_id}&dataset_id=${dataset_id}`, 
+            $.ajax({url: `http://128.253.128.12:8080/badge/nearphone?badge_id=${badge_id}&dataset_id=${dataset_id}`, 
             success: function(result){
                     result.forEach(item => {
                       time_stamp_list_tmp.push(item.timestamp);
@@ -264,7 +264,7 @@
                     var voice_time_tmp = []
                     
                     const getData = (badge_id_tmp, dateFrom, dateTo) => {
-                      var URL = `http://badgeserver.ece.cornell.edu:8080/badge/voice?badge_id=${badge_id_tmp}`;
+                      var URL = `http://128.253.128.12:8080/badge/voice?badge_id=${badge_id_tmp}`;
                       if (dateFrom != null) {
                         URL = URL + "&dataFrom=" + dateFrom.toString();
                       }
@@ -332,7 +332,7 @@
                     $(document).ready(function() {
                       var table = $('#myTable').DataTable( {
                           ajax: {
-                              url: `http://badgeserver.ece.cornell.edu:8080/badge/nearphone?badge_id=${badge_id}&dataset_id=${dataset_id}`,
+                              url: `http://128.253.128.12:8080/badge/nearphone?badge_id=${badge_id}&dataset_id=${dataset_id}`,
                               dataSrc: ''
                           },
                           colReorder: {
