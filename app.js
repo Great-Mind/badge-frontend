@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = 8090;
 const path = require("path");
 app.use(express.static("public"));
 var cors = require("cors");
@@ -26,6 +26,7 @@ app.use(
   })
 );
 
+/*
 app.use(function (req, res, next) {
   if (req.session.loginUser) {
     // 判断用户是否登录
@@ -49,6 +50,7 @@ app.use(function (req, res, next) {
     }
   }
 });
+*/
 
 app.get("/logout", function (req, res, next) {
   req.session.destroy(function (err) {
