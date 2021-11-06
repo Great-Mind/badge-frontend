@@ -137,13 +137,13 @@
 					success: function(result) {
 						console.log("get feedback !!!!");
 						console.log(result);
-						if (result.res == 2) {
+						if (result.returnValue == 2) {
 							$("#message").text(result.msg);
 							$("#message").css("display","block");
-						} else if (result.res == 1) {
+						} else if (result.returnValue == 1) {
 							$("#message").text(result.msg);
 							$("#message").css("display","block");
-						} else if (result.res == 0){
+						} else if (result.returnValue == 0){
 							location.href = `/home?username=${email}`;
 						}
 					}
