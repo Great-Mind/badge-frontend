@@ -194,7 +194,6 @@
               <th>Speak Ratio</th>
             </tr>
           </thead>
-
         </table>
       </div>
 
@@ -389,7 +388,7 @@
                         render: function (data, type, row) {
                           var badge_list = [];
                           for (var i = 0; i < data.length; i++) {
-                            badge_list.push(dict[data[i]]);
+                            badge_list.push(data[i]);
                           }
                           return badge_list;
                         }
