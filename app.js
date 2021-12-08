@@ -72,7 +72,7 @@ app.post("/login", function (req, res, next) {
   var email = req.body.email;
   var passwd = req.body.passwd;
   // $.ajax({
-  //     url:`http://128.253.128.12:8080/login?email=${email}&passwd=${passwd}`,
+  //     url:`http://localhost:8080/login?email=${email}&passwd=${passwd}`,
   //     type: 'POST',
   //     success: function(result) {
   //         if (result) {
@@ -89,7 +89,7 @@ app.post("/login", function (req, res, next) {
   //     }
   // });
 
-  var url = `http://128.253.128.12:8080/user/login?email=${email}&passwd=${passwd}`;
+  var url = `http://localhost:8080/user/login?email=${email}&passwd=${passwd}`;
   request.post(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       console.log(body);
@@ -147,5 +147,5 @@ app.get("/group", function (req, res) {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://128.253.128.12:${port}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });

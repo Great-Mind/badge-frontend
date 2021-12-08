@@ -1,127 +1,143 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Dashboard Template · Bootstrap</title>
-    <script src="//cdn.bootcss.com/Chart.js/2.1.6/Chart.bundle.js"></script>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap-datetimepicker.min.css">
-    <!-- Bootstrap core CSS --> 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
-    <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-    <style>
-        body {
-  font-size: .875rem;
-}
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-}
-div.one {
-        padding: 10px;
-      } 
-/*
- * Sidebar
- */
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-}
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-}
-.sidebar .nav-link {
-  font-weight: 500;
-  color: #333;
-}
-.sidebar .nav-link .feather {
-  margin-right: 4px;
-  color: #999;
-}
-.sidebar .nav-link.active {
-  color: #007bff;
-}
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-  color: inherit;
-}
-.sidebar-heading {
-  font-size: .75rem;
-  text-transform: uppercase;
-}
-/*
- * Content
- */
-[role="main"] {
-  padding-top: 133px; /* Space for fixed navbar */
-}
-@media (min-width: 768px) {
-  [role="main"] {
-    padding-top: 48px; /* Space for fixed navbar */
-  }
-}
-/*
- * Navbar
- */
-.navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, .25);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
-}
-.navbar .form-control {
-  padding: .75rem 1rem;
-  border-width: 0;
-  border-radius: 0;
-}
-.form-control-dark {
-  color: #fff;
-  background-color: rgba(255, 255, 255, .1);
-  border-color: rgba(255, 255, 255, .1);
-}
-.form-control-dark:focus {
-  border-color: transparent;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
-}
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.5">
+
+  <title>Dashboard Template · Bootstrap</title>
+
+  <script src="//cdn.bootcss.com/Chart.js/2.1.6/Chart.bundle.js"></script>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bootstrap-datetimepicker.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+  <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    body {
+      font-size: .875rem;
+    }
+
+    .feather {
+      width: 16px;
+      height: 16px;
+      vertical-align: text-bottom;
+    }
+
+    div.one {
+      padding: 10px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      padding: 48px 0 0;
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    }
+
+    .sidebar-sticky {
+      position: relative;
+      top: 0;
+      height: calc(100vh - 48px);
+      padding-top: .5rem;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+      .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
       }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+    }
+
+    .sidebar .nav-link {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .sidebar .nav-link .feather {
+      margin-right: 4px;
+      color: #999;
+    }
+
+    .sidebar .nav-link.active {
+      color: #007bff;
+    }
+
+    .sidebar .nav-link:hover .feather,
+    .sidebar .nav-link.active .feather {
+      color: inherit;
+    }
+
+    .sidebar-heading {
+      font-size: .75rem;
+      text-transform: uppercase;
+    }
+
+    [role="main"] {
+      padding-top: 133px;
+    }
+
+    @media (min-width: 768px) {
+      [role="main"] {
+        padding-top: 48px;
       }
-    </style>
+    }
+
+    .navbar-brand {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      font-size: 1rem;
+      background-color: rgba(0, 0, 0, .25);
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+    }
+
+    .navbar .form-control {
+      padding: .75rem 1rem;
+      border-width: 0;
+      border-radius: 0;
+    }
+
+    .form-control-dark {
+      color: #fff;
+      background-color: rgba(255, 255, 255, .1);
+      border-color: rgba(255, 255, 255, .1);
+    }
+
+    .form-control-dark:focus {
+      border-color: transparent;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
   <!-- @chr: pop-up form style -->
   <style>
     /* The popup form - hidden by default */
@@ -206,14 +222,13 @@ div.one {
     }
   </style>
   <!-- @chr: form style [end] -->
-    <!-- Custom styles for this template -->
-    <!-- <link href="dashboard.css" rel="stylesheet"> -->
-  </head>
-  <!-- <body onload="getData(myChart);getDetails()"> -->
-    <body ></body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">user name</a>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+</head>
+
+<body>
+
+</body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Group Analysis</a>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
       <a class="nav-link" href="#">Sign out</a>
@@ -225,53 +240,45 @@ div.one {
   <div class="row">
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
       <div class="sidebar-sticky">
+
+        <div class="one">
+          <div class="btn btn-primary" style="cursor: default">
+            Online Badges: <span id="number" class="badge bg-secondary">0</span>
+          </div>
+        </div>
+
+        <ul id="test" class="badgelist list-group">
+          <li class="list-group-item"><img src="./img/phone-fill.svg">Device-1</li>
+        </ul>
+
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="/dev">
-              <span data-feather="home"></span>
+            <a class="nav-link active" href="/home">
               Return <span class="sr-only">(current)</span>
             </a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Datasets
-            </a>
-          </li> -->
-          <!-- @chr: navigation bar button -->
           <li class="nav-item">
             <a class="nav-link active" href="javascript:void(0)" onclick="openBadgeRegisterForm()">
-              <span data-feather="home"></span>
               Badge Registration
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="javascript:void(0)" onclick="openDatasetAssignForm()">
-              <span data-feather="home"></span>
               Dataset Management
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <!-- @chr: navigation bar button [end] -->
         </ul>
-        <div class = "one"> 
-          <button type="button" class="btn btn-primary">
-            Online Badges: <span id ="number" class="badge bg-secondary">0</span>
-          </button>
-        </div>
-        
-    
-        <ul id = "test" class="badgelist list-group">
-          <li class="list-group-item"><img src="./img/phone-fill.svg">Device-1</li>
-
       </div>
     </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2" style="padding-right: 100px;">Group Analysis
-          <span id="datasetid" class="badge bg-secondary">Nokia3</span></h1>
+          <span id="datasetid" class="badge bg-secondary">Nokia3</span>
+        </h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group mr-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -286,102 +293,111 @@ div.one {
       <h4>Badge History</h4>
       <hr>
       <div>
-          <div style="float: left;margin-right: 20px;">
-            <h6>From:</h6>
-            <input  type="text" style="width: 300px; " class="form-control" id="start_picker">
-          </div>
-          <div style="float: left;margin-right: 20px;">
-            <h6 >To:</h6>
-            <input type="text" style="width: 300px; " class="form-control" id="end_picker">
-        
-          </div>
-        <div style="float: left; " >
+        <div style="display: inline-block; margin-right: 20px;">
+          <h6>From:</h6>
+          <input type="text" style="width: 300px; " class="form-control" id="start_picker">
+        </div>
+
+        <div style="display: inline-block; margin-right: 20px;">
+          <h6>To:</h6>
+          <input type="text" style="width: 300px; " class="form-control" id="end_picker">
+        </div>
+
+        <div style="display: inline-block; ">
           <h6>Time Interval:</h6>
           <select id="interval" style="margin-top: 10px;" class="selectpicker">
             <option value="1">5min</option>
             <option value="2">10min</option>
             <option value="3">15min</option>
             <option value="4">20min</option>
-            <option value="5">30min</option>                            
-        </select>
+            <option value="5">30min</option>
+          </select>
+        </div>
+
+        <div style="display: inline-block; margin-left: 30px; margin-top: 20px;">
+          <button id="fat-btn" class="btn btn-primary" onclick="getTime(myChart);">Search</button>
+        </div>
+
+      </div>
+
+      <div id="parentDiv" style="border: 1px solid lightgrey; margin-top: 10px; padding: 10px;">
+        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+      </div>
+      <hr>
+      <h4>Group Chatting Analysis</h4>
+
+      <hr>
+
+      <div style="height: 90px;">
+        <div style="display: inline-block; margin-right: 20px;">
+          <h6>From:</h6>
+          <input type="text" style="width: 300px; " class="form-control" id="voice_start">
+        </div>
+
+        <div style="display: inline-block; margin-right: 20px;">
+          <h6>To:</h6>
+          <input type="text" style="width: 300px; " class="form-control" id="voice_end">
+        </div>
+
+        <div style="display: inline-block;">
+          <h6>Time Interval:</h6>
+          <select id="voice_interval" style="margin-top: 10px;" class="selectpicker">
+            <option value="1">5min</option>
+            <option value="2">10min</option>
+            <option value="3">15min</option>
+            <option value="4">20min</option>
+            <option value="5">30min</option>
+          </select>
+        </div>
+
+        <div style="display: inline-block; margin-left: 30px; margin-top: 20px;">
+          <button id="fat-btn" class="btn btn-primary" onclick="getVoice(pieChart, voice);">Search</button>
+        </div>
+      </div>
+
+      <div>
+        <div style="display: inline-block; width: 400px; height: 400px; border: 1px solid lightgrey; padding: 10px;">
+          <canvas id="pieCanvas"></canvas>
+        </div>
+
+        <div style="display: inline-block; width: 600px; height: 400px; border: 1px solid lightgrey; padding-top: 50px; padding-left: 20px; padding-right: 20px;">
+          <canvas class="" id="voiceCnavas"></canvas>
+        </div>
+      </div>
+
+
+      <hr>
+
+      <h4>Movement Analysis</h4>
+      <hr>
+      <div style="height: 90px;">
+        <div style="float: left;margin-right: 20px;">
+          <h6>From:</h6>
+          <input type="text" style="width: 300px; " class="form-control" id="move_start">
+        </div>
+        <div style="float: left;margin-right: 20px;">
+          <h6>To:</h6>
+          <input type="text" style="width: 300px; " class="form-control" id="move_end">
+        </div>
+        <div style="float: left; ">
+          <h6>Time Interval:</h6>
+          <select id="move_interval" style="margin-top: 10px;" class="selectpicker">
+            <option value="1">5min</option>
+            <option value="2">10min</option>
+            <option value="3">15min</option>
+            <option value="4">20min</option>
+            <option value="5">30min</option>
+          </select>
         </div>
         <div style="float: left; margin-left: 30px; margin-top: 20px;">
-          <button id="fat-btn" class="btn btn-primary" onclick="getTime(myChart);"> Search </button>
+          <button id="fat-btn" class="btn btn-primary" onclick="getMove(move);"> Search </button>
         </div>
       </div>
-      
-    <div id="parentDiv"><canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas></div>
-    
+      <div><canvas class="my-4 w-100" id="moveChart" width="900" height="380"></canvas></div>
 
-    <h4>Speaking Power</h4>
-    <hr>
-    <div style="height: 90px;">
-      <div style="float: left;margin-right: 20px;">
-        <h6>From:</h6>
-        <input  type="text" style="width: 300px; " class="form-control" id="voice_start">
-      </div>
-      <div style="float: left;margin-right: 20px;">
-        <h6 >To:</h6>
-        <input type="text" style="width: 300px; " class="form-control" id="voice_end">
-      </div>
-    <div style="float: left; " >
-      <h6>Time Interval:</h6>
-      <select id="voice_interval" style="margin-top: 10px;" class="selectpicker">
-        <option value="1">5min</option>
-        <option value="2">10min</option>
-        <option value="3">15min</option>
-        <option value="4">20min</option>
-        <option value="5">30min</option>                            
-    </select>
-    </div>
-    <div style="float: left; margin-left: 30px; margin-top: 20px;">
-      <button id="fat-btn" class="btn btn-primary" onclick="getVoice(pieChart,voice );"> Search </button>
-    </div>
-    </div>
-    <div style="height: 400px; display: flex;">
-      <div style="width: 20%; height: 200px; 
-      padding-top:100px;
-      padding-right: 20px;
-      padding-bottom: 150px; display:inline-block">
-        <canvas  id="pieCanvas" style="height: 400px;" ></canvas> 
-      </div>
-      <div style="display:inline-block; width: 70%; height: 200px;">
-        <canvas class="" id="voiceCnavas" ></canvas>
-      </div>
-      
-    </div>
-    <br>
+      <br>
 
-    <h4>Movement Analysis</h4>
-    <hr>
-    <div style="height: 90px;">
-      <div style="float: left;margin-right: 20px;">
-        <h6>From:</h6>
-        <input  type="text" style="width: 300px; " class="form-control" id="move_start">
-      </div>
-      <div style="float: left;margin-right: 20px;">
-        <h6 >To:</h6>
-        <input type="text" style="width: 300px; " class="form-control" id="move_end">
-      </div>
-    <div style="float: left; " >
-      <h6>Time Interval:</h6>
-      <select id="move_interval" style="margin-top: 10px;" class="selectpicker">
-        <option value="1">5min</option>
-        <option value="2">10min</option>
-        <option value="3">15min</option>
-        <option value="4">20min</option>
-        <option value="5">30min</option>                            
-    </select>
-    </div>
-    <div style="float: left; margin-left: 30px; margin-top: 20px;">
-      <button id="fat-btn" class="btn btn-primary" onclick="getMove(move);"> Search </button>
-    </div>
-    </div>
-    <div><canvas class="my-4 w-100" id="moveChart" width="900" height="380"></canvas></div>
-    
-    <br>
-
-    <!-- @chr: badge registration form and dataset assignment form -->
+      <!-- @chr: badge registration form and dataset assignment form -->
     </main>
     <div class="bg" id="bg-badge-register">
       <div class="point">
@@ -423,340 +439,316 @@ div.one {
       </div>
     </div>
     <!--  @chr: badge registration form and dataset assignment form [end] -->
-   
 
-    
-    
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
 
-        <!-- <table class="table">
-          <thead>
-            <th>Badge ID</th><th>TimeStamp</th><th>x Value</th><th>y Value</th><th>z Value</th></tr>
-          </thead>
-          <tbody id="tBody"></tbody>
-        </table> -->
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <div
+      class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
       <h1 class="h2">Please choose the badge_id</h1>
     </div>
-    <div class="container">
+
+    <div class="container" style="margin: 0">
       <table id="myTable" class="display nowrap" width="100%">
         <thead>
           <tr>
             <th>badge_id</th>
-              <th>dataset_id</th>
-              <th>mac_address</th>
-              <th>time</th>
-              <th>user_id</th>
-              <th>user_name</th>
+            <th>dataset_id</th>
+            <th>mac_address</th>
+            <th>time</th>
+            <th>user_id</th>
+            <th>user_name</th>
           </tr>
         </thead>
-
       </table>
     </div>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <!-- <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
-        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" type="text/javascript"></script>
-        <script src="bootstrap-datetimepicker.min.js"></script>
-        <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-        <script src="js/chart.js"></script>
-        <script src="js/chart.min.js"> </script>
-        <script>
-            $("#parentDiv").css("width", "1000px");
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+      integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+      src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" type="text/javascript"></script>
+    <script src="bootstrap-datetimepicker.min.js"></script>
+    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/chart.min.js"> </script>
+    <script>
+      $("#parentDiv").css("width", "1000px");
       $("#parentDiv").css("overflow", "auto");
-          //////////////////////////////loading canvas
-          var ctx4 = document.getElementById('moveChart');
-          var  move  = new Chart(ctx4, {
-                type: 'bar',
-                data: {
-                labels: [
-                  '1','2','3','4','6'
-                ],
-                datasets: [
-                  {
-                    label:'1-Speak',
-                    data: [
-                      2,3,4,5
-                    ],
-                
-                    backgroundColor: '#007bff',
-                   
-                },{ label:'Db Values',
-                    data: [
-                    1],
-                    
-                    backgroundColor: '#007bff',
-                  
-                }
-                ]
-                },
-                options: {
-                scales: {
-                    yAxes: [{
-                    ticks: {
-                        beginAtZero: false
-                    }
-                    }]
-                },
-                legend: {
-                    display: true
-                }
-                }
-            })
 
-           var ctx2 = document.getElementById('pieCanvas').getContext('2d');
-          
-          var pieChart = new Chart(ctx2, {
-            type: 'pie',
-            data : {
-  labels: [
-    
-  ],
-  datasets: [{
-    label: 'My First Dataset',
-    data: [],
-    backgroundColor: [
-      
-    ],
-   
-  }]
-},
-    options: {
-        scales: {
+      // charts 1
+      var ctx = document.getElementById('myChart')
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Number of online Badges in this dataset',
+            data: [],
+            lineTension: 0,
+            backgroundColor: '#007bff',
+            borderColor: '#007bff',
+            borderWidth: 1,
+            pointRadius: 0,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
             y: {
-                beginAtZero: true
+              ticks: {
+                beginAtZero: true,
+                stepSize: 1
+              }
             }
+          },
+          legend: {
+            display: true
+          },
         }
-    }
-    
-});
-           var ctx = document.getElementById('myChart')
-            //eslint-disable-next-line no-unused-vars
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                labels: [
-                    
-                  
-                ],
-                datasets: [{
-                    label:'Number of Badges',
-                    data: [
-                    
-                    ],
-                    lineTension: 0,
-                    backgroundColor: '#007bff',
-                    borderColor: '#007bff',
-                    borderWidth: 1,
-                    pointRadius: 0,
-                    pointBackgroundColor: '#007bff'
-                }
-                ]
-                },
-                options: {
-                scales: {
-                    yAxes: [{
-                    ticks: {
-                        beginAtZero: false
-                    }
-                    }]
-                },
-                legend: {
-                    display: true
-                },
-                
-                
-                }
-            });
-           
-    var ctx3 = document.getElementById('voiceCnavas');
+      });
 
-            
-    
-
-        var voice = new Chart(ctx3, {
-                type: 'bar',
-                data: {
-                labels: [
-                  '1','2','3','4','6'
-                ],
-                datasets: [
-                  {
-                    label:'1-Speak',
-                    data: [
-                      2,3,4,5
-                    ],
-                
-                    backgroundColor: '#007bff',
-                   
-                },{ label:'Db Values',
-                    data: [
-                    1],
-                    
-                    backgroundColor: '#007bff',
-                  
-                }
-                ]
-                },
-                options: {
-                scales: {
-                    yAxes: [{
-                    ticks: {
-                        beginAtZero: false
-                    }
-                    }]
-                },
-                legend: {
-                    display: true
-                }
-                }
-            })
-
-     
-          const dataset_id = getUrlVars()["dataset_id"];
-           let UPDATE = 5000;
-            $(document).ready(function() {
-              $("#datasetid").text(dataset_id);
-            var table = $('#myTable').DataTable( {
-                  ajax: {
-                      url: `http://128.253.128.12:8080/badge/badges?dataset_id=${dataset_id}`,
-                      dataSrc: '',
-                  },
-              colReorder: {
-            realtime: true
-              },
-                  "aoColumns" : [
-                      {data : 'id',
-                      render: function ( data, type, row, meta ) {
-                        return `<a href= '/dataset/badge?dataset_id=${dataset_id}&badge_id=${data}'>${data}</a>`;
-                      }},
-                      {data : 'datasetid'},
-                      {data : 'macaddr'},
-                      {data : 'timestamp',
-                      render: function ( data, type, row ) {
-                        return new Date(data).toLocaleString();
-                      }},
-                      {data : 'userid'},
-                      {data : 'username'}
-              ]
-              
-              } );
-      } 
-        
-      );
-          const getDataforbadge = (myChart, dateFrom, dateTo, interval) => {
-              var URL = `http://128.253.128.12:8080/badge/activehistory?dataset_id=${dataset_id}`;
-              if (dateFrom != null) {
-                URL = URL + "&dataFrom=" + dateFrom.toString();
-              }
-              if (dateTo != null) {
-                URL = URL + "&dataTo=" + dateTo.toString();
-              }
-              var min = 5;   
-              console.log("interval"+interval); 
-              switch(interval){
-                case "1":
-                  min = 5;
-                  break;
-                case "2":
-                  min = 10;
-                  break;
-                case "3":
-                  min = 15;
-                  break;
-                case "4":
-                  min = 20;
-                  break;
-                case "5":
-                  console.log("300000000!")
-                  min = 30;
-                  break;
-              }
-              URL = URL + "&minute=" + min;
-              console.log(URL);
-              
-                $.ajax({url: URL, 
-                        success: function(result){
-                            let xlabels = [];
-                            let xdata = [];
-          
-                            console.log("success=========!!!");
-                            console.log(result);
-                            result.forEach(item => {
-                                
-                                xlabels.push(new Date(item.med).toLocaleString());
-                                xdata.push(item.num);
-                              
-                                
-                            });
-                            // result.nums.forEach(item => {
-                            //   xdata.push(item);
-                            // })
-                            // result.timestamps.forEach(item => {
-                            //   xlabels.push(new Date(item).toLocaleString());
-                            // })
-                            let d = [];
-                            d.push(xdata);
-                            
-                            myChart.data.labels = xlabels;
-                            myChart.data.datasets.forEach((dataset, index) => {
-                                dataset.data = d[index];
-                            })
-                            myChart.update();
-                            } 
-                        }
-                );
+      // chart 2
+      var ctx2 = document.getElementById('pieCanvas').getContext('2d');
+      var pieChart = new Chart(ctx2, {
+        type: 'pie',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'My First Dataset',
+            data: [],
+            backgroundColor: [],
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              display: false,
             }
-          // loading table data
-          $(function () {
-              $('#start_picker').datetimepicker();
+          }
+        }
+      });
+
+      // chart 3
+      var ctx3 = document.getElementById('voiceCnavas');
+      var voice = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+          labels: [],
+          datasets: [
+            {
+              label: '1-Speak',
+              data: [],
+              backgroundColor: '#6F95F8',
+            }, 
+            {
+              label: 'Db Values',
+              data: [],
+              backgroundColor: '#78CFE5',
+            }
+          ]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: true
+          }
+        }
+      })
+
+      // chart 4
+      var ctx4 = document.getElementById('moveChart');
+      var move = new Chart(ctx4, {
+        type: 'bar',
+        data: {
+          labels: [
+            '1', '2', '3', '4', '5'
+          ],
+          datasets: [
+            {
+              label: '1-Speak',
+              data: [
+                2, 3, 4, 5
+              ],
+
+              backgroundColor: '#007bff',
+
+            }, {
+              label: 'Db Values',
+              data: [
+                1],
+
+              backgroundColor: '#007bff',
+
+            }
+          ]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: true
+          }
+        }
+      });
+
+
+      const dataset_id = getUrlVars()["dataset_id"];
+      let UPDATE = 5000;
+      $(document).ready(function () {
+        $("#datasetid").text(dataset_id);
+        var table = $('#myTable').DataTable({
+          ajax: {
+            url: `http://localhost:8080/badge/badges?dataset_id=${dataset_id}`,
+            dataSrc: '',
+          },
+          colReorder: {
+            realtime: true
+          },
+          "aoColumns": [
+            {
+              data: 'id',
+              render: function (data, type, row, meta) {
+                return `<a href= '/dataset/badge?dataset_id=${dataset_id}&badge_id=${data}'>${data}</a>`;
+              }
+            },
+            { data: 'datasetid' },
+            { data: 'macaddr' },
+            {
+              data: 'timestamp',
+              render: function (data, type, row) {
+                return new Date(data).toLocaleString();
+              }
+            },
+            { data: 'userid' },
+            { data: 'username' }
+          ]
+
+        });
+      });
+
+      const getDataforbadge = (myChart, dateFrom, dateTo, interval) => {
+        var URL = `http://localhost:8080/badge/activehistory?dataset_id=${dataset_id}`;
+        if (dateFrom != null) {
+          URL = URL + "&dataFrom=" + dateFrom.toString();
+        }
+        if (dateTo != null) {
+          URL = URL + "&dataTo=" + dateTo.toString();
+        }
+        var min = 5;
+        switch (interval) {
+          case "1":
+            min = 5;
+            break;
+          case "2":
+            min = 10;
+            break;
+          case "3":
+            min = 15;
+            break;
+          case "4":
+            min = 20;
+            break;
+          case "5":
+            min = 30;
+            break;
+        }
+        URL = URL + "&minute=" + min;
+
+        $.ajax({
+          url: URL,
+          success: function (result) {
+            let xlabels = [];
+            let xdata = [];
+
+            console.log("success=========!!!");
+            console.log(result);
+            result.forEach(item => {
+              xlabels.push(new Date(item.med).toLocaleString());
+              xdata.push(item.num);
             });
-            $(function () {
-              $('#end_picker').datetimepicker();
-            });
-            $(function () {
-              $('#voice_start').datetimepicker();
-            });
-            $(function () {
-              $('#voice_end').datetimepicker();
-            });
-            $(function () {
-              $('#move_start').datetimepicker();
-            });
-            $(function () {
-              $('#move_end').datetimepicker();
-            });
-         
+            // result.nums.forEach(item => {
+            //   xdata.push(item);
+            // })
+            // result.timestamps.forEach(item => {
+            //   xlabels.push(new Date(item).toLocaleString());
+            // })
+            let d = [];
+            d.push(xdata);
+
+            myChart.data.labels = xlabels;
+            myChart.data.datasets.forEach((dataset, index) => {
+              dataset.data = d[index];
+            })
+            myChart.update();
+          }
+        });
+      }
+      // loading table data
+      $(function () {
+        $('#start_picker').datetimepicker();
+      });
+      $(function () {
+        $('#end_picker').datetimepicker();
+      });
+      $(function () {
+        $('#voice_start').datetimepicker();
+      });
+      $(function () {
+        $('#voice_end').datetimepicker();
+      });
+      $(function () {
+        $('#move_start').datetimepicker();
+      });
+      $(function () {
+        $('#move_end').datetimepicker();
+      });
+
       //loading voice percentage
-      
+
       //loading the voice percentage
-     
+
       //laoding badge history
-         
-          //online badge list
-    window.onload = function () {
+
+      //online badge list
+      window.onload = function () {
         onlineBadge();
       }
       function onlineBadge() {
         setTimeout(onlineBadge, 10 * 1000);
         $("#test").empty()
         $.ajax({
-          url:'http://128.253.128.12:8080/badge/activephone',
-          type:'get',
-          dataType:'json',
-          success: function(data) {
+          url: 'http://localhost:8080/badge/activephone',
+          type: 'get',
+          dataType: 'json',
+          success: function (data) {
             var num = 0;
-            $.each(data, function(index, item){
+            $.each(data, function (index, item) {
               $("#test").append('<li class="list-group-item"><img src="./img/phone-fill.svg">' + item + '</li>');
               num += 1;
             });
@@ -765,18 +757,18 @@ div.one {
         });
       }
       //
-      const getDataforMove = (move, dateFrom,dateTo, interval) => {
-        var URL2 = `http://128.253.128.12:8080/badge/badgemovementratio?dataset_id=${dataset_id}`;
+      const getDataforMove = (move, dateFrom, dateTo, interval) => {
+        var URL2 = `http://localhost:8080/badge/badgemovementratio?dataset_id=${dataset_id}`;
         if (dateFrom != null) {
-                URL2 = URL2 + "&dataFrom=" + dateFrom.toString();
-              }
-              if (dateTo != null) {
-                URL2 = URL2 + "&dataTo=" + dateTo.toString();
-              }
+          URL2 = URL2 + "&dataFrom=" + dateFrom.toString();
+        }
+        if (dateTo != null) {
+          URL2 = URL2 + "&dataTo=" + dateTo.toString();
+        }
         console.log(URL2);
         $.ajax({
-          url:URL2,
-          success: function(result){
+          url: URL2,
+          success: function (result) {
             let labels = [];
             let sit = [];
             let moveData = [];
@@ -791,8 +783,8 @@ div.one {
             let cur = [];
             cur[0] = 'Sit';
             cur[1] = 'Move';
-            move.data.label= labels;
-            move.data.datasets.forEach((dataset,index) => {
+            move.data.label = labels;
+            move.data.datasets.forEach((dataset, index) => {
               dataset.data = min[index];
               dataset.label = cur[index];
             });
@@ -801,245 +793,241 @@ div.one {
         })
       }
       const getDataforPower = (voice, dateFrom, dateTo, interval) => {
-              var URL1 = `http://128.253.128.12:8080/badge/speechratio?dataset_id=${dataset_id}`;
-              if (dateFrom != null) {
-                URL1 = URL1 + "&dataFrom=" + dateFrom.toString();
-              }
-              if (dateTo != null) {
-                URL1 = URL1 + "&dataTo=" + dateTo.toString();
-              }
-              var min = 5;   
-              console.log("interval"+interval); 
-              switch(interval){
-                case "1":
-                  min = 5;
-                  break;
-                case "2":
-                  min = 10;
-                  break;
-                case "3":
-                  min = 15;
-                  break;
-                case "4":
-                  min = 20;
-                  break;
-                case "5":
-                  console.log("300000000!")
-                  min = 30;
-                  break;
-              }
-              URL1 = URL1 + "&minute=" + min;
-              $.ajax({
-                url: URL1,
-                success: function(result){
-                  let labelss = [];
-                  let store = [];
-                  let devices = result[0].badgeIdList;
-                  
-                  for (var i = 0; i < devices.length; i ++) {
-                    store[i] = [];
-                  }
-                  result.forEach((item) => {
-                    // item.percentageList.forEach((num, index) => {
-                    //   store[index].push(num);
-                    // })
-                    //console.log("rsult+++percentage");
-                    
-                    item.percentageList.forEach((item,index) => {
-                      
-                      store[index].push(item);
-                    })
-                    //console.log(store);
-                    labelss.push(new Date(item.med).toLocaleString());
-                  });
-                  //console.log(store);
-                  voice.data.labels = labelss;
-                  console.log("start to loading data");
-                  console.log(labelss);
-                  voice.data.datasets.forEach((dataset, index) => {
-                
-                                dataset.data = store[index];
-                                dataset.backgroundColor = getRandomColor(); 
-                                dataset.label = devices[index];
-                            });
-                  voice.update();
-                }
+        var URL1 = `http://localhost:8080/badge/speechratio?dataset_id=${dataset_id}`;
+        if (dateFrom != null) {
+          URL1 = URL1 + "&dataFrom=" + dateFrom.toString();
+        }
+        if (dateTo != null) {
+          URL1 = URL1 + "&dataTo=" + dateTo.toString();
+        }
+        var min = 5;
+        console.log("interval" + interval);
+        switch (interval) {
+          case "1":
+            min = 5;
+            break;
+          case "2":
+            min = 10;
+            break;
+          case "3":
+            min = 15;
+            break;
+          case "4":
+            min = 20;
+            break;
+          case "5":
+            console.log("300000000!")
+            min = 30;
+            break;
+        }
+        URL1 = URL1 + "&minute=" + min;
+        $.ajax({
+          url: URL1,
+          success: function (result) {
+            let labelss = [];
+            let store = [];
+            let devices = result[0].badgeIdList;
+
+            for (var i = 0; i < devices.length; i++) {
+              store[i] = [];
+            }
+            result.forEach((item) => {
+              // item.percentageList.forEach((num, index) => {
+              //   store[index].push(num);
+              // })
+              //console.log("rsult+++percentage");
+
+              item.percentageList.forEach((item, index) => {
+
+                store[index].push(item);
               })
-              
-            }
-            function getMove(move) {
-              var dateFrom = $('#move_start').data("DateTimePicker").date();
-            console.log(dateFrom);
-            if (dateFrom != null) {
-              dateFrom = dateFrom.valueOf();
-            }
-            var dateTo = $('#move_end').data("DateTimePicker").date();
-            if (dateTo != null) {
-              dateTo = dateTo.valueOf();
-            }
-            var interval = $("#voice_interval").val();
-            console.log("get DATE +=++++_+++++");
-            getDataforMove(move, dateFrom,dateTo, interval);
-            }
-      function getVoice(pieChart, voice) {
-        var dateFrom = $('#voice_start').data("DateTimePicker").date();
-            console.log(dateFrom);
-            if (dateFrom != null) {
-              dateFrom = dateFrom.valueOf();
-            }
-            var dateTo = $('#voice_end').data("DateTimePicker").date();
-            if (dateTo != null) {
-              dateTo = dateTo.valueOf();
-            }
-            var interval = $("#voice_interval").val();
-            console.log("get DATE +=++++_+++++");
-            getDataforPower(voice, dateFrom,dateTo, interval);
-            getDataforVoice(pieChart, dateFrom, dateTo, interval);
-            
-            getDetails(dateFrom, dateTo);
-            
-      }
-          function getTime(myChart){
-            var dateFrom = $('#start_picker').data("DateTimePicker").date();
-            console.log(dateFrom);
-            if (dateFrom != null) {
-              dateFrom = dateFrom.valueOf();
-            }
-            var dateTo = $('#end_picker').data("DateTimePicker").date();
-            if (dateTo != null) {
-              dateTo = dateTo.valueOf();
-            }
-            var interval = $("#interval").val();
-            console.log("selection:"+interval);
-            getDataforbadge(myChart, dateFrom, dateTo, interval);
-            getDetails(dateFrom, dateTo);
+              //console.log(store);
+              labelss.push(new Date(item.med).toLocaleString());
+            });
+            //console.log(store);
+            voice.data.labels = labelss;
+            console.log("start to loading data");
+            console.log(labelss);
+            voice.data.datasets.forEach((dataset, index) => {
+
+              dataset.data = store[index];
+              dataset.backgroundColor = getRandomColor();
+              dataset.label = devices[index];
+            });
+            voice.update();
           }
-          
-            function getUrlVars() {
-                var vars = {};
-                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-                    vars[key] = value;
-                });
-                return vars;
-            }
-            
-            
-            const getDataforVoice = (pieChart, dateFrom, dateTo, interval) => {
-              var URL = `http://128.253.128.12:8080/badge/badgespeechratio?dataset_id=${dataset_id}`;
-              if (dateFrom != null) {
-                URL = URL + "&dataFrom=" + dateFrom.toString();
-              }
-              if (dateTo != null) {
-                URL = URL + "&dataTo=" + dateTo.toString();
-              }
-              var min = 5;   
-              console.log("interval"+interval); 
-              switch(interval){
-                case "1":
-                  min = 5;
-                  break;
-                case "2":
-                  min = 10;
-                  break;
-                case "3":
-                  min = 15;
-                  break;
-                case "4":
-                  min = 20;
-                  break;
-                case "5":
-                  console.log("300000000!")
-                  min = 30;
-                  break;
-              }
-              
-              console.log(URL);
+        })
+
+      }
+      function getMove(move) {
+        var dateFrom = $('#move_start').data("DateTimePicker").date();
+        console.log(dateFrom);
+        if (dateFrom != null) {
+          dateFrom = dateFrom.valueOf();
+        }
+        var dateTo = $('#move_end').data("DateTimePicker").date();
+        if (dateTo != null) {
+          dateTo = dateTo.valueOf();
+        }
+        var interval = $("#voice_interval").val();
+        console.log("get DATE +=++++_+++++");
+        getDataforMove(move, dateFrom, dateTo, interval);
+      }
+
+      function getVoice(pieChart, voice) {
+
+        var dateFrom = $('#voice_start').data("DateTimePicker").date();
+        if (dateFrom != null) {
+          dateFrom = dateFrom.valueOf();
+        }
+
+        var dateTo = $('#voice_end').data("DateTimePicker").date();
+        if (dateTo != null) {
+          dateTo = dateTo.valueOf();
+        }
+        
+        var interval = $("#voice_interval").val();
+        
+        getDataforPower(voice, dateFrom, dateTo, interval);
+        getDataforVoice(pieChart, dateFrom, dateTo, interval);
+      }
+
+      function getTime(myChart) {
+        var dateFrom = $('#start_picker').data("DateTimePicker").date();
+        console.log(dateFrom);
+        if (dateFrom != null) {
+          dateFrom = dateFrom.valueOf();
+        }
+        var dateTo = $('#end_picker').data("DateTimePicker").date();
+        if (dateTo != null) {
+          dateTo = dateTo.valueOf();
+        }
+        var interval = $("#interval").val();
+        console.log("selection:" + interval);
+        getDataforbadge(myChart, dateFrom, dateTo, interval);
+      }
+
+      function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+          vars[key] = value;
+        });
+        return vars;
+      }
 
 
-              // var voice = [{"badge_id":"device-0513-4","dataset_id":"Nokia3","percentage":0.3316582914572864,"dataFrom":1619553107758,"dataTo":1619553616316},{"badge_id":"device-0513-3","dataset_id":"Nokia3","percentage":0.3227848101265823,"dataFrom":1619553107758,"dataTo":1619553616316}];
-              // let colors  = [];
-              // let labelss = [];
-              // let datas = [];
-              // voice.forEach(item =>{
-              //   labelss.push(item.badge_id);
-              //   colors.push(getRandomColor());
-              //   datas.push(item.percentage);
-              // });
-              // let temp = [];
-              // temp.push(datas);
-              // let temp1 = [];
-              // temp1.push(colors);
-              // console.log(datas);
-              // console.log(colors);
-              // console.log(labelss)
-              // pieChart.data.labels = labelss;
-              // pieChart.data.datasets.forEach((dataset, index) => {
-              //               dataset.data = temp[index];
-              //               dataset.backgroundColor=temp1[index];
-              //           });
-              // pieChart.data.dataset.data=datas;
-              // pieChart.data.dateset.backgroundColor=colors;
-              //pieChart.update();
-              $.ajax({
-                url:URL,
-                success: function(result) {
-                  let colors  = [];
-                  let labelss = [];
-                  let datas = [];
-                  result.forEach(item => {
-                    labelss.push(item.badge_id);
-                    colors.push(getRandomColor());
-                    datas.push(item.percentage);
-                  });
-                  let temp = [];
-                  temp.push(datas);
-                  let temp1 = [];
-                  temp1.push(colors);
-                  pieChart.data.labels = labelss;
-                  pieChart.data.datasets.forEach((dataset, index) => {
-                                dataset.data = temp[index];
-                                dataset.backgroundColor = temp1[index]
-                            });
-                  pieChart.update();
-                }
-                
-              })
-            }
-            
-            'use strict'
-            feather.replace()
-           
-            //Graphs
-          
+      const getDataforVoice = (pieChart, dateFrom, dateTo, interval) => {
+        var URL = `http://localhost:8080/badge/badgespeechratio?dataset_id=${dataset_id}`;
+        if (dateFrom != null) {
+          URL = URL + "&dataFrom=" + dateFrom.toString();
+        }
+        if (dateTo != null) {
+          URL = URL + "&dataTo=" + dateTo.toString();
+        }
+        var min = 5;
+        console.log("interval" + interval);
+        switch (interval) {
+          case "1":
+            min = 5;
+            break;
+          case "2":
+            min = 10;
+            break;
+          case "3":
+            min = 15;
+            break;
+          case "4":
+            min = 20;
+            break;
+          case "5":
+            console.log("300000000!")
+            min = 30;
+            break;
+        }
 
-            
-            
-            setInterval( function () {
-              console.log('reload');
-                $('#myTable').DataTable().ajax.reload(null, false);
-            }, UPDATE  );
-            function getUrlParam(parameter, defaultvalue){
-              var urlparameter = defaultvalue;
-              if(window.location.href.indexOf(parameter) > -1){
-                urlparameter = getUrlVars()[parameter];
-              }
-              return urlparameter;
-            }
-          
-        </script>
-       
-        <script>
-          
-         
-function getRandomColor() {
+        console.log(URL);
+
+
+        // var voice = [{"badge_id":"device-0513-4","dataset_id":"Nokia3","percentage":0.3316582914572864,"dataFrom":1619553107758,"dataTo":1619553616316},{"badge_id":"device-0513-3","dataset_id":"Nokia3","percentage":0.3227848101265823,"dataFrom":1619553107758,"dataTo":1619553616316}];
+        // let colors  = [];
+        // let labelss = [];
+        // let datas = [];
+        // voice.forEach(item =>{
+        //   labelss.push(item.badge_id);
+        //   colors.push(getRandomColor());
+        //   datas.push(item.percentage);
+        // });
+        // let temp = [];
+        // temp.push(datas);
+        // let temp1 = [];
+        // temp1.push(colors);
+        // console.log(datas);
+        // console.log(colors);
+        // console.log(labelss)
+        // pieChart.data.labels = labelss;
+        // pieChart.data.datasets.forEach((dataset, index) => {
+        //               dataset.data = temp[index];
+        //               dataset.backgroundColor=temp1[index];
+        //           });
+        // pieChart.data.dataset.data=datas;
+        // pieChart.data.dateset.backgroundColor=colors;
+        //pieChart.update();
+        $.ajax({
+          url: URL,
+          success: function (result) {
+            let colors = [];
+            let labelss = [];
+            let datas = [];
+            result.forEach(item => {
+              labelss.push(item.badge_id);
+              colors.push(getRandomColor());
+              datas.push(item.percentage);
+            });
+            let temp = [];
+            temp.push(datas);
+            let temp1 = [];
+            temp1.push(colors);
+            pieChart.data.labels = labelss;
+            pieChart.data.datasets.forEach((dataset, index) => {
+              dataset.data = temp[index];
+              dataset.backgroundColor = temp1[index]
+            });
+            pieChart.update();
+          }
+
+        })
+      }
+
+      'use strict'
+      feather.replace()
+
+      //Graphs
+      setInterval(function () {
+        console.log('reload');
+        $('#myTable').DataTable().ajax.reload(null, false);
+      }, UPDATE);
+      function getUrlParam(parameter, defaultvalue) {
+        var urlparameter = defaultvalue;
+        if (window.location.href.indexOf(parameter) > -1) {
+          urlparameter = getUrlVars()[parameter];
+        }
+        return urlparameter;
+      }
+
+    </script>
+
+    <script>
+
+
+      function getRandomColor() {
         var letters = '0123456789ABCDEF'.split('');
         var color = '#';
-        for (var i = 0; i < 6; i++ ) {
-            color += letters[Math.floor(Math.random() * 16)];
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
-    }
-        </script>
+      }
+    </script>
 
     <!-- @chr: pop-up form script -->
     <script>
@@ -1067,7 +1055,7 @@ function getRandomColor() {
         };
         // TODO: [ajax] try backend connection
         $.ajax({
-          url: "http://128.253.128.12:8080/user/badgeregister",
+          url: "http://localhost:8080/user/badgeregister",
           type: "post",
           data: newBadge,
           success: function (result) { alert(result); },
@@ -1087,17 +1075,13 @@ function getRandomColor() {
 
         // TODO: [ajax] backend controller
         $.ajax({
-          url: "http://128.253.128.12:8080/user/getbadges",
+          url: "http://localhost:8080/user/getbadges",
           type: "get",
           success: function (result) {
             for (var i = 0; i < result.length; i++) {
               var badge = "<li class='badge-selection-item' style='margin-bottom:8px;'>" + "<input type='checkbox' class='badge-selection-checkbox'>" + "<span>" + result[i]["badgeid"] + "</span>" + "<br/><span>>>>@dataset: " + result[i]["datasetid"] + "</span>" + "</li>";
               $("#badge-selection-container").append(badge);
             }
-
-
-
-
           },
           error: function () {
             alert("Error: error occurs! can't get badge ids. try to cancel this form and open it again.");
@@ -1120,31 +1104,26 @@ function getRandomColor() {
           dataset_id: $("#assign_dataset_id").val(),
           selected_badges: selected_badges
         };
-        // TODO: [ajax] send badge management information
-        // example data
-        /*
-        {
-          "dataset_id": "fake_dataset_id",
-          "selected_badges": ["fake_selected_badge_id_1", "fake_selected_badge_id_2", "fake_selected_badge_id_1"]
-        }
+        /* 
+            TODO: [ajax] send badge management information
+            example data
+        
+            {
+              "dataset_id": "fake_dataset_id",
+              "selected_badges": ["fake_selected_badge_id_1", "fake_selected_badge_id_2", "fake_selected_badge_id_1"]
+            }
+       
+            var str1 = "\{\"dataset_id\"\:\"Nokia1\",\"selected_badges\"\:\[\"device-0513-4\"\]\}"
+
         */
-        // var str1 = "\{\"dataset_id\"\:\"Nokia1\",\"selected_badges\"\:\[\"device-0513-4\"\]\}"
-
         var jsonString = JSON.stringify(datasetAssignment);
-        // console.log(jsonString);
-        // console.log(typeof(jsonString));
-
-        // console.log(datasetAssignment);
-        // console.log(typeof(datasetAssignment));
-        // console.log(str1);
-        // console.log(typeof(str1));
 
         $.ajax({
-          url: "http://128.253.128.12:8080/user/assign",
+          url: "http://localhost:8080/user/assign",
           type: "post",
           contentType: "application/json",
           data: jsonString,
-          success: function (result) { 
+          success: function (result) {
             alert(result);
             closeDatasetAssignForm();
           },
@@ -1153,6 +1132,6 @@ function getRandomColor() {
       }
     </script>
     <!-- @chr: pop-up form script [end] -->
-        
     </body>
+
 </html>
