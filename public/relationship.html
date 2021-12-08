@@ -191,7 +191,7 @@
               <th>Time</th>
               <th>Dataset ID</th>
               <th>Group Badge ID</th>
-              <th>Speak Ratio</th>
+              <!-- <th>Speak Ratio</th> -->
             </tr>
           </thead>
         </table>
@@ -393,17 +393,17 @@
                           return badge_list;
                         }
                       },
-                      {
-                        render: function (data, type, row) {
-                          index = index + 1;
-                          if (index >= voice_ratio.length) {
-                            return [0, 0];
-                          }
-                          else {
-                            return voice_ratio[index].map(x => (x * 100).toFixed(2) + "%");
-                          }
-                        }
-                      }
+                      // {
+                      //   render: function (data, type, row) {
+                      //     index = index + 1;
+                      //     if (index >= voice_ratio.length) {
+                      //       return [0, 0];
+                      //     }
+                      //     else {
+                      //       return voice_ratio[index].map(x => (x * 100).toFixed(2) + "%");
+                      //     }
+                      //   }
+                      // }
                     ]
 
                   });
