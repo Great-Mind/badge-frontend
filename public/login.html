@@ -117,7 +117,7 @@
                 const email = $("#email").val();
 				const passwd = $("#password").val();
                 console.log(email);
-                // $.get(`http://localhost:8080/login?email=${email}`,function(data){
+                // $.get(`http://128.253.128.12:8080/login?email=${email}`,function(data){
 				// 	if (data != passwd) {
 				// 		$("#message").css("display","block");
 				// 	} else {
@@ -125,7 +125,7 @@
 				// 	}
 				// });
 				$.ajax({
-					url:`http://localhost:8080/user/login`,
+					url:`http://128.253.128.12:8080/user/login`,
 					type:'POST',
 					data: {
 						email : email,
