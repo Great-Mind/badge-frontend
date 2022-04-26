@@ -12,6 +12,7 @@
   <title>Dashboard Template · Bootstrap</title>
 
   <script src="//cdn.bootcss.com/Chart.js/2.1.6/Chart.bundle.js"></script>
+  <script src="//d3js.org/d3.v3.min.js"></script>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -137,6 +138,7 @@
         font-size: 3.5rem;
       }
     }
+
   </style>
   <!-- @chr: pop-up form style -->
   <style>
@@ -328,6 +330,13 @@
 
       <hr>
 
+      <div id="group-chart">
+        <div style="display: inline-block; margin-right: 20px;">
+          <h6>Time:</h6>
+          <input type="text" style="width: 300px; " class="form-control" id="group-search">
+        </div>
+        <button id="fat-btn" class="btn btn-primary" onclick="getGroup();">Search</button>
+      </div>
       <div style="height: 90px;">
         <div style="display: inline-block; margin-right: 20px;">
           <h6>From:</h6>
@@ -364,7 +373,6 @@
           <canvas class="" id="voiceCnavas"></canvas>
         </div>
       </div>
-
 
       <hr>
 
@@ -485,6 +493,7 @@
     <script src="bootstrap-datetimepicker.min.js"></script>
     <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
     <script src="js/chart.js"></script>
+    <script src="js/group-chart.js"></script>
     <script src="js/chart.min.js"> </script>
     <script>
       $("#parentDiv").css("width", "1000px");
@@ -717,6 +726,9 @@
         $('#end_picker').datetimepicker();
       });
       $(function () {
+        $('#group-search').datetimepicker();
+      });
+      $(function () {
         $('#voice_start').datetimepicker();
       });
       $(function () {
@@ -890,6 +902,23 @@
         
         getDataforPower(voice, dateFrom, dateTo, interval);
         getDataforVoice(pieChart, dateFrom, dateTo, interval);
+      }
+
+      function getGroup(){
+        var dateTime = $('#group-search').data("DateTimePicker").date();
+        var URL = `http://128.253.128.12:8080/badge/badgegroupchart?dataset_id=${dataset_id}`;
+        if (dateTime != null) {
+          URL = URL + "&search_date=" + dateTime.valueOf().toString();
+        }
+        console.log(URL)
+
+        $.ajax({
+          url: URL,
+          success: function (res) {
+            drawGroupChart(res);
+          }
+        })
+
       }
 
       function getTime(myChart) {

@@ -346,13 +346,13 @@
                     ]
                     
                       } );
-            } 
-              
-            );
-            setInterval( function () {
-              console.log('reload');
-                $('#myTable').DataTable().ajax.reload(null, false);
-            }, UPDATE  );
+
+                    } 
+                    );
+                    // setInterval( function () {
+            //   console.log('reload');
+            //     $('#myTable').DataTable().ajax.reload(null, false);
+            // }, UPDATE  );
             function getUrlParam(parameter, defaultvalue){
               var urlparameter = defaultvalue;
               if(window.location.href.indexOf(parameter) > -1){
