@@ -262,7 +262,7 @@
       
                             result.forEach(item => {
                                 xlabels.push(new Date(item.timestamp).toLocaleString());
-                                mdata.push(item.frequency);
+                                mdata.push(item.frequency*5);
                                 fdata.push(item.decibel);
                                 
                             });
